@@ -15,11 +15,17 @@ namespace Activity_1.Controllers
 
         public IActionResult Index()
         {
+            ViewBag.Message = "Index() method";
+            ViewBag.MyFavouriteColour = "Green";
+            ViewData["Greeting"] = "Hello Index!";
             return View();
         }
 
         public IActionResult Privacy()
         {
+            ViewBag.Message = "Privacy() method";
+            ViewBag.MyFavouriteColour = "Green";
+            ViewData["Greeting"] = "Hello Privacy!";
             return View();
         }
 

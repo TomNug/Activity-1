@@ -3,6 +3,7 @@
 }
 <h1>@ViewData["Title"]</h1>
 <p>@ViewBag.Message</p>
-<p>@ViewData["Greeting"]</p>
+@* Using ViewBag data sent from Controller to define CSS properties *@
+<p style="background-color: @ViewData["MyFavouriteColour"]">@ViewData["Greeting"]</p>
 <p>Use this page to detail your site's privacy policy.</p>
 

@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Activity_1.Services;
 
 namespace Activity_1.Controllers
 {
@@ -10,7 +11,8 @@ namespace Activity_1.Controllers
         }
         public IActionResult ProcessLogin(Models.UserModel userModel)
         {
-            if (userModel.Username == "user" && userModel.Password == "pass")
+            SecurityService securityService = new SecurityService();
+            if (securityService.isValid(userModel))
             {
                 return View("LoginSuccess", userModel);
             } else
